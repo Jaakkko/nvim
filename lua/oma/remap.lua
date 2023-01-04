@@ -1,0 +1,26 @@
+vim.g.mapleader = " "
+vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+
+vim.keymap.set("", "$", "<NOP>")
+vim.keymap.set("", "0", "<NOP>")
+vim.keymap.set("", "ä", "$")
+vim.keymap.set("", "ö", "0")
+vim.keymap.set({"", "l"}, "Ö", "{", { remap = true })
+vim.keymap.set({"", "l"}, "Ä", "}", { remap = true })
+vim.keymap.set("n", "caÖ", "ca{")
+vim.keymap.set("n", "caÄ", "ca}")
+vim.keymap.set("n", "ciÖ", "ci{")
+vim.keymap.set("n", "ciÄ", "ci}")
+vim.keymap.set("", "rå", "r<ESC>")
+vim.keymap.set({"l","v"}, "å", "<ESC>")
+vim.keymap.set({"l","v"}, "<ESC>", "<NOP>")
+vim.keymap.set("n", "<leader>sh", "<cmd>set hlsearch!<cr>")
+vim.keymap.set("n", "<leader>sc", "<cmd>noh<cr>")
+
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+
+vim.keymap.set("n", "<C-d>", "<C-d>zz")
+vim.keymap.set("n", "<C-u>", "<C-u>zz")
+vim.keymap.set("n", "n", "nzzzv")
+vim.keymap.set("n", "N", "Nzzzv")
