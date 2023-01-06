@@ -1,19 +1,22 @@
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
-vim.keymap.set("", "$", "<NOP>")
-vim.keymap.set("", "0", "<NOP>")
-vim.keymap.set("", "ä", "$")
-vim.keymap.set("", "ö", "0")
-vim.keymap.set({"", "l"}, "Ö", "{", { remap = true })
-vim.keymap.set({"", "l"}, "Ä", "}", { remap = true })
-vim.keymap.set("n", "caÖ", "ca{")
-vim.keymap.set("n", "caÄ", "ca}")
-vim.keymap.set("n", "ciÖ", "ci{")
-vim.keymap.set("n", "ciÄ", "ci}")
-vim.keymap.set("", "rå", "r<ESC>")
-vim.keymap.set({"l","v"}, "å", "<ESC>")
-vim.keymap.set({"l","v"}, "<ESC>", "<NOP>")
+vim.keymap.set("", "$", "<End>")
+vim.keymap.set("", "0", "<Home>")
+vim.keymap.set("", "ä", "$", { remap = true })
+vim.keymap.set("", "ö", "0", { remap = true })
+
+-- remap <ESC> to å
+vim.keymap.set({"c", "t", "l"}, "<ESC>", "<NOP>")
+vim.keymap.set({"c", "t", "l"}, "å", "<ESC>")
+
+-- l for r,f and t commands
+-- c for cmd-line
+vim.keymap.set({"", "c", "t", "l"}, "Ö", "{", { remap = true })
+vim.keymap.set({"", "c", "t", "l"}, "Ä", "}", { remap = true })
+
+vim.keymap.set("n", "<c-å>", "<c-]>")
+
 vim.keymap.set("n", "<leader>sh", "<cmd>set hlsearch!<cr>")
 vim.keymap.set("n", "<leader>sc", "<cmd>noh<cr>")
 
