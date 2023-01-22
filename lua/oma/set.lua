@@ -1,35 +1,55 @@
+vim.g.neovide_remember_window_size = true
 vim.g.neovide_cursor_animation_length = 0
-vim.g.recent_dirs_size = 10
 
-vim.o.wildignorecase = true
-vim.o.nu = true
-vim.o.relativenumber = true
+vim.opt.background = 'dark'
 
-vim.o.tabstop = 2
-vim.o.shiftwidth = 2
-vim.o.softtabstop = 2
-vim.o.expandtab = true
+vim.opt.wildignorecase = true
+vim.opt.nu = true
+vim.opt.rnu = true
 
-vim.o.smartindent = true
+vim.opt.tabstop = 2
+vim.opt.shiftwidth = 2
+vim.opt.softtabstop = 2
+vim.opt.expandtab = true
 
-vim.o.wrap = false
+vim.opt.smartindent = true
 
-vim.o.swapfile = false
-vim.o.backup = false
-vim.o.undodir = os.getenv("HOME") .. "/.vim/undodir"
-vim.o.undofile = true
+vim.opt.wrap = false
 
-vim.o.hlsearch = false
-vim.o.incsearch = true
+vim.opt.swapfile = false
+vim.opt.backup = false
+vim.opt.undodir = os.getenv 'HOME' .. '/.vim/undodir'
+vim.opt.undofile = true
 
-vim.o.termguicolors = true
+vim.opt.hlsearch = false
+vim.opt.incsearch = true
 
-vim.o.scrolloff = 8
-vim.o.signcolumn = "yes"
+vim.opt.termguicolors = true
 
-vim.o.imcmdline = true
-vim.o.iminsert = 1
-vim.o.hlsearch = false
-vim.o.timeout = false
-vim.o.guifont = 'JetBrainsMonoNL NF:h12'
-vim.o.mouse = 'vni'
+vim.opt.scrolloff = 8
+vim.opt.signcolumn = 'yes'
+
+vim.opt.imcmdline = true
+vim.opt.iminsert = 1
+vim.opt.hlsearch = false
+vim.opt.timeout = false
+vim.opt.guifont = 'JetBrainsMonoNL NF:h12'
+vim.opt.mouse = 'vni'
+
+vim.opt.completeopt = { 'menu', 'menuone', 'noselect' }
+vim.opt.sessionoptions = {
+  'blank',
+  'buffers',
+  'curdir',
+  'folds',
+  'help',
+  'tabpages',
+  'winsize',
+  'winpos',
+  'terminal',
+  'localoptions',
+}
+
+vim.opt.laststatus = 3
+
+vim.opt.autoread = true

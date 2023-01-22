@@ -1,1 +1,1 @@
-require("oma")
+require 'oma'
